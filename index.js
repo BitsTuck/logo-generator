@@ -6,6 +6,8 @@ const {Circle, Square, Triangle} = require('./utils/generateLogo');
 newCircle = new Circle ('blt', 'blue', 'red')
 console.log(newCircle)
 console.log(newCircle.newShape())
+
+newSquare = new Square ('blt', 'blue', 'red')
 // Questions posed by the app, including type and potential answer choices (see: license)
 const questions = [ {
     type: 'input',
@@ -38,7 +40,9 @@ const questions = [ {
 inquirer
   .prompt(questions)
   .then((response) => {
-    // let newShape = new Circle(response.initials, response.textColor, response.shapeColor); SWITCH CASE GOES HERE
+    let newShape = new Circle(response.initials, response.textColor, response.shapeColor); 
+    // let newShape = new Square(response.initials, response.textColor, response.shapeColor)
     fs.writeFile('logo.svg', newShape.newShape(), (err) =>
     err ? console.log('Please complete the form') : console.log('Thanks! Click on logo.svg to see your logo.'))
-  });
+  }); 
+//   SWITCH CASE GOES at letNewShape
