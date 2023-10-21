@@ -1,7 +1,7 @@
 //Imports inquirer, fs, and the generateMarkdown.js funcionalities into the index.js file.
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { Circle, Square, Triangle } = require('./utils/generateLogo');
+const { Circle, Square, Triangle } = require('./lib/generateLogo');
 
 // newCircle = new Circle ('blt', 'blue', 'red')
 // console.log(newCircle)
@@ -53,5 +53,5 @@ inquirer
       }
     }
     fs.writeFile('logo.svg', logoShape.newShape(), (err) =>
-    err ? console.log('Please complete the form') : console.log('Thanks! Click on logo.svg to see your logo.'))
+    err ? console.log('Please complete the form') : console.log('Generated logo.svg.'))
   });
