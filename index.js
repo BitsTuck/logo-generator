@@ -36,22 +36,23 @@ const questions = [{
 inquirer
   .prompt(questions)
   .then((response) => {
-  let logoShape =
-      function (response) {
-        switch (response) {
-        case 'Circle':
-          return (new Circle(response.initials, response.textColor, response.shapeColor));
+    console.log(response)
+  let logoShape;
+        switch (response.shape) {
+        case 'Circle': 
+          logoShape = (new Circle(response.initials, response.textColor, response.shapeColor));
           break;
         case 'Square':
-          return (new Square(response.initials, response.textColor, response.shapeColor));
+          logoShape = (new Square(response.initials, response.textColor, response.shapeColor));
           break;
         case 'Triangle':
-          return (new Triangle(response.initials, response.textColor, response.shapeColor));
+          logoShape = (new Triangle(response.initials, response.textColor, response.shapeColor));
           break;
         default:
           break;
       }
-    }
+
+    console.log(logoShape)
     fs.writeFile('logo.svg', logoShape.newShape(), (err) =>
     err ? console.log('Please complete the form') : console.log('Generated logo.svg.'))
   });
