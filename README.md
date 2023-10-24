@@ -12,7 +12,7 @@ The Challenge for Module #10 asked us to create a logo generator using Node.js a
 
 ## Usage
 
-To use this app, clone the app files into your favorite code editor. Right click index.js, and select Open in Integrated Terminal (or similar command based on your editor). Type <i> node index.js </i> in the terminal and press return. To create your logo, answer each question, and press return after each answer. Use your arrows to scroll through the shape options. When all questions are answered, your logo will be generated in a file called <i>logo.svg</i>. Click on the file to see the code, or right-click and view the logo in a browser.
+To use this app, clone the app files into your favorite code editor. Right click index.js, and select Open in Integrated Terminal (or similar command based on your editor). Type <i> node index.js </i> in the terminal and press return. To create your logo, answer each question, and press return after each answer. Use your arrows to scroll through the shape options. When all questions are answered, your logo will be generated in the examples folder, in a file called <i>logo.svg</i>. Click on the file to see the code, or right-click and view the logo in a browser.
 
 To test the generateLogo.js file, type <i>npm test</i> in the terminal and hit return. All three shapes will return passing tests.
 

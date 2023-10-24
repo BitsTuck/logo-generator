@@ -47,6 +47,6 @@ inquirer
       }
 
     console.log(logoShape)
-    fs.writeFile('logo.svg', logoShape.newShape(), (err) =>
+    fs.writeFile(__dirname + '/examples/logo.svg', logoShape.newShape(), (err) =>
     err ? console.log('Please complete the form') : console.log('Generated logo.svg.'))
   });
