@@ -3,12 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const { Circle, Square, Triangle } = require('./lib/generateLogo');
 
-// newCircle = new Circle ('blt', 'blue', 'red')
-// console.log(newCircle)
-// console.log(newCircle.newShape())
 
-// newSquare = new Square ('blt', 'blue', 'red')
-// Questions posed by the app, including type and potential answer choices (see: license)
 const questions = [{
   type: 'input',
   message: 'Please enter your initials (up to three):',
@@ -31,7 +26,6 @@ const questions = [{
   name: 'shapeColor',
 }];
 
-//invokes inquirer and directs the writing of the ReadMe file when the questions have been answered. Error handling included.
 
 inquirer
   .prompt(questions)
